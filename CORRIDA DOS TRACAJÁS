@@ -1,0 +1,24 @@
+quant = int(input('forneça a quantidade de Tracajás:'))
+lvel = []
+
+while 0 >= quant or quant > 50:
+  print('<ERRO>',end='  ')
+  quant = int(input('Forneça a quantidade de tracajás:'))
+
+for i in range (quant):
+  vel = int(input('forneça a velocidade do tracajá:'))
+  while 0 >= vel or 25 < vel:
+    print('<ERRO> na linha',(i+2))
+    vel = int(input('Forneça a velocidade do trocajá em KM/H:'))
+
+  lvel.append(vel)
+  lvel.sort()
+
+if lvel[(quant - 1)] < 10:
+  print('o tracajá mais rapido do grupo é nivel 1')
+
+if lvel[(quant - 1)] >= 10 and lvel[(quant - 1)] < 15:
+  print('o tracajá mais rapido do grupo é nivel 2')
+
+if lvel[(quant - 1)] >= 15:
+  print('o tracajá mais rapido do grupo é nivel 3')
